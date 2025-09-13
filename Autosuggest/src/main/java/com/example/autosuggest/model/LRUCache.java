@@ -16,6 +16,10 @@ public class LRUCache<K,V> {
 		head.next=tail;
 		tail.prev=head;
 	}
+	
+	public boolean containsKey(K key) {
+		return cache.containsKey(key);
+	}
 	public V get(K key) {
 		if(!cache.containsKey(key)) {
 			return null;
